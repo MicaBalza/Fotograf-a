@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        height: 100vh;
+        background: black;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      main {
+        height: 90%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #cuerpo {
+        width: 5%;
+        font-size: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      img {
+        width: 100%;
+        filter: grayscale(100%);
+      }
+
+      img:hover {
+        width: 800%;
+        filter: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="cuerpo">
+        <img src="img/Parrilla.jpg" alt="Parrilla" onclick="resize()" />
+        <img src="img/Lavadero.jpg" alt="Lavadero" />
+        <img src="img/Pileta.jpg" alt="Pileta" />
+        <img src="img/SeAceptanMascotas.jpg" alt="Se Aceptan Mascotas" />
+        <img src="img/Comedor.jpg" alt="Comedor" />
+        <img src="img/SalaDeJuegos.jpg" alt="Sala De Juegos" />
+        <img src="img/MediaTerraza.jpg" alt="Media Terraza" />
+        <img src="img/Gimnasio.jpg" alt="Gimnasio" />
+      </div>
+    </main>
+  </body>
+</html>
