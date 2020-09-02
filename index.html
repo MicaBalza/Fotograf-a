@@ -9,9 +9,6 @@
       rel="stylesheet"
     />
     <style>
-      * {
-      }
-
       body {
         background: black;
         overflow-x: hidden;
@@ -45,6 +42,14 @@
         flex-direction: column;
       }
 
+      .container {
+        position: fixed;
+        z-index: 99;
+        display: none;
+        width: 100%;
+        top: 5%;
+      }
+
       .tira {
         display: flex;
         justify-content: space-between;
@@ -56,38 +61,47 @@
         height: auto;
       }
     </style>
+    <script>
+      function myFunction(imgs) {
+        var expandImg = document.getElementById("expandedImg");
+        expandImg.src = imgs.src;
+        expandImg.parentElement.style.display = "block";
+        expandImg.style.boxShadow = "0px 0px 300px 200px rgba(0,0,0,0.75)";
+      }
+    </script>
   </head>
   <body>
     <div id="cuerpo">
       <h1>Terrazas</h1>
-
-      <img
-        id="parrilla"
-        src="img/Textura.jpg"
-        alt="Parrilla"
-        onclick="myFunction(this);"
-      />
+      <div class="container">
+        <img
+          id="expandedImg"
+          style="width: 70%"
+          onclick="this.parentElement.style.display='none'"
+        />
+      </div>
+      <img id="textura" src="img/Textura.jpg" alt="Textura" />
       <div class="tira">
         <img
           src="img/Gimnasio.jpg"
+          alt="Gimnasio"
+          onclick="myFunction(this);"
+        />
+        <img
+          src="img/Lavadero.jpg"
           alt="Lavadero"
           onclick="myFunction(this);"
         />
-        <img src="img/Lavadero.jpg" alt="Pileta" onclick="myFunction(this);" />
         <img
           src="img/Parrilla.jpg"
-          alt="Se Aceptan Mascotas"
+          alt="Parrilla"
           onclick="myFunction(this);"
         />
       </div>
 
-      <img src="img/Comedor.jpg" alt="Comedor" onclick="myFunction(this);" />
+      <img src="img/Comedor.jpg" alt="Comedor" />
       <div class="tira">
-        <img
-          src="img/Pileta.jpg"
-          alt="Sala De Juegos"
-          onclick="myFunction(this);"
-        />
+        <img src="img/Pileta.jpg" alt="Pileta" onclick="myFunction(this);" />
         <img
           src="img/MediaTerraza.jpg"
           alt="Media Terraza"
@@ -95,16 +109,11 @@
         />
         <img
           src="img/SalaDeJuegos.jpg"
-          alt="Gimnasio"
+          alt="Sala De Juegos"
           onclick="myFunction(this);"
         />
       </div>
-      <img
-        id="parrilla"
-        src="img/Monstruo.jpg"
-        alt="Parrilla"
-        onclick="myFunction(this);"
-      />
+      <img id="parrilla" src="img/Monstruo.jpg" alt="Monstruo" />
     </div>
     <h5>Fotografía Trilnick - FADU - UBA - 2020</h5>
   </body>
